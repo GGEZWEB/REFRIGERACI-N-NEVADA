@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refrigeración Nevada | Servicio Técnico en Monterrey</title>
+<meta name="description" content="Reparación y mantenimiento de refrigeradores, congeladores, lavadoras, secadoras y minisplits en el Área Metropolitana de Monterrey. Servicio el mismo día, a domicilio y con garantía.">
+
+<!-- ============ FUENTES ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   1. VARIABLES Y RESET
+   ========================================================================== */
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#F8F9FA;
+  --text:#1A1A1A;
+  --text-soft:#3A3F44;
+  --accent:#0a4b7a;
+  --accent-dark:#073653;
+  --accent-light:#1673ad;
+  --ice:#BFE9F5;
+  --ice-pale:#EAF7FC;
+  --whatsapp:#25D366;
+  --radius:14px;
+  --shadow:0 12px 30px -12px rgba(10,75,122,0.25);
+  --maxw:1180px;
+  --font-head:'Montserrat', sans-serif;
+  --font-body:'Inter', sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:var(--font-body);
+  color:var(--text-soft);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block;}
+
+a{text-decoration:none;color:inherit;}
+
+ul{list-style:none;}
+
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 24px;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-head);
+  color:var(--text);
+  line-height:1.2;
+}
+
+section{padding:96px 0;}
+
+@media(max-width:768px){
+  section{padding:64px 0;}
+}
+
+.eyebrow-none{display:none;} /* placeholder: no usamos etiquetas eyebrow por diseño */
+
+/* Botón base */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:15px;
+  padding:16px 32px;
+  border-radius:999px;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  white-space:nowrap;
+}
+.btn:focus-visible{outline:3px solid var(--ice);outline-offset:3px;}
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{
+  background:var(--whatsapp);
+  color:#fff;
+  box-shadow:0 10px 24px -8px rgba(37,211,102,.55);
+}
+.btn-primary:hover{box-shadow:0 14px 28px -8px rgba(37,211,102,.65);}
+
+.btn-outline{
+  background:transparent;
+  border-color:var(--accent);
+  color:var(--accent);
+}
+.btn-outline:hover{background:var(--ice-pale);}
+
+.btn-light{
+  background:#fff;
+  color:var(--accent);
+}
+.btn-ghost-on-blue{
+  background:transparent;
+  border-color:rgba(255,255,255,.55);
+  color:#fff;
+}
+.btn-ghost-on-blue:hover{background:rgba(255,255,255,.12);}
+
+.btn-sm{padding:11px 22px;font-size:13.5px;}
+
+/* Icono SVG inline dentro de botones */
+.btn svg{width:19px;height:19px;flex-shrink:0;}
+
+/* ==========================================================================
+   2. HEADER
+   ========================================================================== */
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(10,75,122,0.08);
+  transition:box-shadow .25s ease;
+}
+.site-header.scrolled{box-shadow:0 6px 24px -12px rgba(10,75,122,.25);}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:78px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-mark{
+  width:46px;height:46px;
+  border-radius:12px;
+  background:linear-gradient(160deg,var(--accent-light),var(--accent-dark));
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 6px 16px -4px rgba(10,75,122,.5);
+}
+.brand-mark svg{width:26px;height:26px;}
+
+.brand-name{
+  font-family:var(--font-head);
+  font-size:17.5px;
+  font-weight:700;
+  color:var(--text);
+  line-height:1.15;
+}
+.brand-name span{
+  display:block;
+  font-weight:900;
+  font-size:19px;
+  letter-spacing:0.5px;
+  background:linear-gradient(100deg, var(--accent) 10%, #37b7e6 45%, var(--ice) 60%, var(--accent) 90%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 1px 12px rgba(191,233,245,.5);
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
+.header-nav a{
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--text-soft);
+  transition:color .15s ease;
+  position:relative;
+}
+.header-nav a:hover{color:var(--accent);}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.header-phone{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:15px;
+  color:var(--accent-dark);
+}
+.header-phone svg{width:18px;height:18px;color:var(--accent);}
+
+.header-fb{
+  width:38px;height:38px;
+  border-radius:50%;
+  background:var(--ice-pale);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+  transition:background .15s ease;
+}
+.header-fb:hover{background:var(--ice);}
+.header-fb svg{width:19px;height:19px;}
+
+.nav-toggle{
+  display:none;
+  width:42px;height:42px;
+  border-radius:10px;
+  border:1.5px solid rgba(10,75,122,.2);
+  background:#fff;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.nav-toggle svg{width:20px;height:20px;color:var(--accent-dark);}
+
+@media(max-width:900px){
+  .header-nav{
+    position:fixed;
+    top:78px;left:0;right:0;
+    background:#fff;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding:8px 24px 20px;
+    box-shadow:0 16px 24px -16px rgba(10,75,122,.3);
+    transform:translateY(-8px);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .header-nav.open{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+  }
+  .header-nav a{
+    width:100%;
+    padding:14px 0;
+    border-bottom:1px solid var(--bg-alt);
+  }
+  .nav-toggle{display:flex;}
+  .header-phone span{display:none;}
+}
+
+@media(max-width:520px){
+  .brand-name{font-size:15px;}
+  .brand-name span{font-size:16.5px;}
+}
+
+/* ==========================================================================
+   3. HERO
+   ========================================================================== */
+.hero{
+  padding:150px 0 90px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(700px 420px at 88% -10%, var(--ice-pale) 0%, transparent 65%),
+    var(--bg);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:56px;
+  align-items:center;
+}
+
+.hero-text h1{
+  font-size:clamp(2.1rem,4.2vw,3.2rem);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  margin-bottom:22px;
+}
+
+.hero-text p{
+  font-size:17.5px;
+  color:var(--text-soft);
+  max-width:520px;
+  margin-bottom:34px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:36px;
+}
+
+.hero-trust{
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+}
+.hero-trust li{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--accent-dark);
+}
+.hero-trust svg{width:19px;height:19px;color:var(--whatsapp);flex-shrink:0;}
+
+.hero-media{
+  position:relative;
+}
+.hero-media-frame{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:6px solid #fff;
+  outline:1px solid rgba(10,75,122,.08);
+  position:relative;
+  z-index:2;
+}
+.hero-media-frame img{
+  width:100%;
+  height:420px;
+  object-fit:contain;
+  background:#EAF7FC;
+  padding:24px;
+  display:block;
+}
+.hero-illustration{
+  background:#EAF7FC;
+}
+.hero-illustration svg{
+  width:100%;
+  height:420px;
+  display:block;
+}
+.hero-blob{
+  position:absolute;
+  width:340px;height:340px;
+  border-radius:42% 58% 63% 37% / 41% 45% 55% 59%;
+  background:linear-gradient(150deg, var(--ice) 0%, var(--ice-pale) 100%);
+  top:-40px;right:-50px;
+  z-index:1;
+  opacity:.9;
+}
+.hero-badge{
+  position:absolute;
+  bottom:-22px;
+  left:-22px;
+  z-index:3;
+  background:#fff;
+  border-radius:16px;
+  padding:14px 20px;
+  box-shadow:0 14px 30px -10px rgba(10,75,122,.35);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.hero-badge .badge-ico{
+  width:42px;height:42px;
+  border-radius:12px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.hero-badge .badge-ico svg{width:22px;height:22px;color:#fff;}
+.hero-badge strong{
+  display:block;
+  font-family:var(--font-head);
+  font-size:14.5px;
+  color:var(--text);
+}
+.hero-badge span{
+  font-size:12.5px;
+  color:var(--text-soft);
+}
+
+@media(max-width:900px){
+  .hero{padding:126px 0 64px;}
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:44px;
+  }
+  /* En móvil la imagen va DEBAJO del texto */
+  .hero-text{order:1;}
+  .hero-media{order:2;margin-top:12px;}
+  .hero-text p{max-width:none;}
+  .hero-media-frame img{height:280px;padding:16px;}
+  .hero-illustration svg{height:300px;}
+  .hero-badge{left:12px;bottom:-18px;padding:11px 16px;}
+}
+
+/* ==========================================================================
+   4. SERVICIOS
+   ========================================================================== */
+.section-head{
+  max-width:640px;
+  margin:0 auto 56px;
+  text-align:center;
+}
+.section-head h2{
+  font-size:clamp(1.7rem,3vw,2.3rem);
+  font-weight:800;
+  margin-bottom:14px;
+}
+.section-head p{
+  font-size:16px;
+  color:var(--text-soft);
+}
+
+.services{background:var(--bg-alt);}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:34px 28px 30px;
+  border:1px solid rgba(10,75,122,.07);
+  transition:transform .2s ease, box-shadow .2s ease;
+  display:flex;
+  flex-direction:column;
+}
+.service-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 34px -18px rgba(10,75,122,.28);
+}
+
+.service-ico{
+  width:56px;height:56px;
+  border-radius:14px;
+  background:linear-gradient(150deg, var(--ice-pale), var(--ice));
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.service-ico svg{width:28px;height:28px;color:var(--accent-dark);}
+
+.service-card h3{
+  font-size:19px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.service-card p{
+  font-size:14.5px;
+  color:var(--text-soft);
+  flex-grow:1;
+  margin-bottom:22px;
+}
+
+@media(max-width:960px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr;}
+}
+
+/* ==========================================================================
+   5. VENTAJAS
+   ========================================================================== */
+.advantages-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+.advantage{
+  text-align:center;
+  padding:0 10px;
+}
+.advantage-ico{
+  width:64px;height:64px;
+  border-radius:50%;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  box-shadow:0 10px 22px -8px rgba(10,75,122,.45);
+}
+.advantage-ico svg{width:30px;height:30px;color:#fff;}
+.advantage h3{
+  font-size:16.5px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.advantage p{
+  font-size:13.8px;
+  color:var(--text-soft);
+}
+
+@media(max-width:860px){
+  .advantages-grid{grid-template-columns:repeat(2,1fr);row-gap:40px;}
+}
+
+/* ==========================================================================
+   6. COBERTURA
+   ========================================================================== */
+.coverage{
+  background:var(--bg-alt);
+}
+.coverage-box{
+  max-width:820px;
+  margin:0 auto;
+  background:#fff;
+  border-radius:20px;
+  padding:44px 40px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(10,75,122,.07);
+  text-align:center;
+}
+.coverage-box .coverage-title{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:18.5px;
+  color:var(--accent-dark);
+  margin-bottom:22px;
+}
+.coverage-box .coverage-title svg{width:22px;height:22px;color:var(--accent);}
+
+.city-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+}
+.city-list li{
+  background:var(--ice-pale);
+  color:var(--accent-dark);
+  font-weight:600;
+  font-size:14px;
+  padding:10px 20px;
+  border-radius:999px;
+  border:1px solid rgba(10,75,122,.1);
+}
+
+@media(max-width:640px){
+  .coverage-box{padding:34px 22px;}
+}
+
+/* ==========================================================================
+   7. CONTACTO FINAL
+   ========================================================================== */
+.contact-cta{
+  background:linear-gradient(135deg, var(--accent-dark), var(--accent) 55%, var(--accent-light));
+  color:#fff;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.contact-cta::before{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  top:-260px;right:-160px;
+}
+.contact-cta .container{position:relative;z-index:2;}
+
+.contact-cta h2{
+  color:#fff;
+  font-size:clamp(1.6rem,3vw,2.1rem);
+  font-weight:800;
+  margin-bottom:10px;
+}
+.contact-cta > .container > p{
+  color:rgba(255,255,255,.85);
+  max-width:520px;
+  margin:0 auto 36px;
+  font-size:16px;
+}
+
+.contact-phone-big{
+  font-family:var(--font-head);
+  font-weight:900;
+  font-size:clamp(2.2rem,6vw,3.4rem);
+  letter-spacing:1px;
+  margin-bottom:36px;
+}
+
+.contact-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.site-footer{
+  background:#0d1117;
+  color:rgba(255,255,255,.7);
+  padding:56px 0 26px;
+}
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:30px;
+  flex-wrap:wrap;
+  padding-bottom:34px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  margin-bottom:24px;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.footer-brand .brand-mark{box-shadow:none;}
+.footer-brand-name{
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:17px;
+  color:#fff;
+}
+.footer-tagline{
+  font-size:13px;
+  color:rgba(255,255,255,.55);
+  margin-top:2px;
+}
+
+.footer-socials{
+  display:flex;
+  gap:12px;
+}
+.footer-socials a{
+  width:42px;height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;
+  transition:background .15s ease;
+}
+.footer-socials a:hover{background:var(--accent);}
+.footer-socials svg{width:19px;height:19px;}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:12.5px;
+  color:rgba(255,255,255,.45);
+}
+
+@media(max-width:640px){
+  .footer-top{flex-direction:column;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+}
+
+/* ==========================================================================
+   9. BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================================== */
+.whatsapp-float{
+  position:fixed;
+  bottom:26px;
+  right:26px;
+  width:60px;height:60px;
+  border-radius:50%;
+  background:var(--whatsapp);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 28px -8px rgba(37,211,102,.65);
+  z-index:900;
+  animation:wa-pulse 2.6s ease-in-out infinite;
+}
+.whatsapp-float svg{width:30px;height:30px;color:#fff;}
+
+@keyframes wa-pulse{
+  0%,100%{box-shadow:0 12px 28px -8px rgba(37,211,102,.65);}
+  50%{box-shadow:0 12px 28px -4px rgba(37,211,102,.9),0 0 0 10px rgba(37,211,102,.12);}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .whatsapp-float{animation:none;}
+  *{scroll-behavior:auto !important;}
+}
+
+@media(max-width:520px){
+  .whatsapp-float{width:54px;height:54px;bottom:18px;right:18px;}
+  .whatsapp-float svg{width:26px;height:26px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER FIJO
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.5 6l15 12M19.5 6l-15 12M2 12h20" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-name">Refrigeración<span>NEVADA</span></span>
+    </a>
+
+    <nav class="header-nav" id="headerNav">
+      <a href="#servicios">Servicios</a>
+      <a href="#ventajas">Ventajas</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+528119396538" class="header-phone" aria-label="Llamar a Refrigeración Nevada">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.27a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+        <span>81-1939-6538</span>
+      </a>
+      <a href="https://www.facebook.com/share/1DDs7YiRNK/" target="_blank" rel="noopener" class="header-fb" aria-label="Facebook de Refrigeración Nevada">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- ============================================================
+     HERO / PORTADA
+     ============================================================ -->
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-text">
+      <h1>Servicio Especializado en Línea Blanca y Minisplits</h1>
+      <p>Reparación, mantenimiento e instalación. Servicio el mismo día, a domicilio y con garantía en el Área Metropolitana de Monterrey.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20solicitar%20un%20servicio%20con%20Refrigeraci%C3%B3n%20Nevada" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.5.02.2 5.32.2 11.87c0 2.1.55 4.14 1.6 5.95L.1 24l6.34-1.66a11.86 11.86 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.3 11.86-11.85 0-3.17-1.24-6.15-3.4-8.4zM12.06 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.76.99 1-3.66-.24-.37a9.78 9.78 0 0 1-1.5-5.2c0-5.41 4.4-9.81 9.83-9.81a9.75 9.75 0 0 1 6.95 2.88 9.75 9.75 0 0 1 2.88 6.94c0 5.42-4.41 9.81-9.79 9.81zm5.37-7.34c-.29-.15-1.74-.86-2-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.91-2.19-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.42 0 1.43 1.04 2.81 1.19 3 .15.2 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.62.7.22 1.33.19 1.83.11.56-.08 1.74-.71 1.98-1.4.24-.68.24-1.27.17-1.4-.07-.13-.27-.2-.56-.35z"/></svg>
+          ¡LLAME YA!
+        </a>
+        <a class="btn btn-outline" href="#servicios">Ver Servicios</a>
+      </div>
+
+      <ul class="hero-trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Servicio a domicilio</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Mismo día</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Trabajos garantizados</li>
+      </ul>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="hero-media-frame hero-illustration">
+        <!-- Ilustración original: técnico profesional frente a línea blanca -->
+        <svg viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un técnico profesional frente a un refrigerador y una lavadora">
+          <defs>
+            <linearGradient id="skyGrad3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#EAF7FC"/>
+              <stop offset="100%" stop-color="#D7EFF8"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="0" y="0" width="640" height="460" fill="url(#skyGrad3)"/>
+          <ellipse cx="320" cy="430" rx="260" ry="18" fill="#0a4b7a" opacity="0.08"/>
+
+          <!-- copos de nieve decorativos -->
+          <g stroke="#8FCBE0" stroke-width="3" stroke-linecap="round" opacity="0.55">
+            <g transform="translate(60,55)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><line x1="-8" y1="-8" x2="8" y2="8"/><line x1="-8" y1="8" x2="8" y2="-8"/></g>
+            <g transform="translate(580,70) scale(0.8)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><line x1="-8" y1="-8" x2="8" y2="8"/><line x1="-8" y1="8" x2="8" y2="-8"/></g>
+          </g>
+
+          <!-- LAVADORA (izquierda) -->
+          <g>
+            <rect x="30" y="188" width="128" height="210" rx="18" fill="#FFFFFF" stroke="#0a4b7a" stroke-width="3.5"/>
+            <rect x="46" y="202" width="96" height="18" rx="6" fill="#EAF7FC" stroke="#8FCBE0" stroke-width="1.5"/>
+            <circle cx="94" cy="300" r="52" fill="#EAF7FC" stroke="#0a4b7a" stroke-width="3.5"/>
+            <circle cx="94" cy="300" r="38" fill="none" stroke="#8FCBE0" stroke-width="6"/>
+            <circle cx="122" cy="212" r="4" fill="#1673ad"/>
+            <circle cx="134" cy="212" r="4" fill="#1673ad"/>
+          </g>
+
+          <!-- REFRIGERADOR (derecha) -->
+          <g>
+            <rect x="470" y="70" width="150" height="328" rx="22" fill="#FFFFFF" stroke="#0a4b7a" stroke-width="3.5"/>
+            <line x1="470" y1="172" x2="620" y2="172" stroke="#0a4b7a" stroke-width="3.5"/>
+            <rect x="490" y="98" width="8" height="46" rx="4" fill="#0a4b7a"/>
+            <rect x="490" y="204" width="8" height="58" rx="4" fill="#0a4b7a"/>
+            <circle cx="592" cy="110" r="14" fill="#EAF7FC" stroke="#8FCBE0" stroke-width="2"/>
+            <g stroke="#1673ad" stroke-width="2" stroke-linecap="round">
+              <line x1="592" y1="103" x2="592" y2="117"/><line x1="585" y1="110" x2="599" y2="110"/>
+              <line x1="587" y1="105" x2="597" y2="115"/><line x1="587" y1="115" x2="597" y2="105"/>
+            </g>
+          </g>
+
+          <!-- TÉCNICO (centro) -->
+          <g>
+            <ellipse cx="320" cy="414" rx="70" ry="12" fill="#0a4b7a" opacity="0.1"/>
+
+            <!-- piernas -->
+            <rect x="286" y="318" width="30" height="78" rx="14" fill="#073653"/>
+            <rect x="330" y="318" width="30" height="78" rx="14" fill="#073653"/>
+            <rect x="278" y="390" width="44" height="18" rx="9" fill="#1A1A1A"/>
+            <rect x="326" y="390" width="44" height="18" rx="9" fill="#1A1A1A"/>
+
+            <!-- brazo izquierdo (mano en la cintura) -->
+            <path d="M282 226 Q 238 244 250 292" stroke="#1673ad" stroke-width="26" stroke-linecap="round" fill="none"/>
+            <circle cx="253" cy="296" r="16" fill="#FFC49E"/>
+
+            <!-- torso -->
+            <rect x="272" y="204" width="112" height="118" rx="32" fill="#1673ad"/>
+            <rect x="272" y="296" width="112" height="14" rx="7" fill="#073653"/>
+            <!-- cierre / detalle del uniforme -->
+            <line x1="328" y1="214" x2="328" y2="300" stroke="#0e5a90" stroke-width="4"/>
+
+            <!-- brazo derecho levantado saludando -->
+            <path d="M378 224 Q 420 200 416 156" stroke="#1673ad" stroke-width="26" stroke-linecap="round" fill="none"/>
+            <circle cx="416" cy="150" r="17" fill="#FFC49E"/>
+
+            <!-- cuello -->
+            <rect x="310" y="186" width="26" height="24" rx="8" fill="#FFC49E"/>
+
+            <!-- cabeza -->
+            <circle cx="323" cy="154" r="46" fill="#FFC49E"/>
+            <!-- cara -->
+            <circle cx="307" cy="156" r="5" fill="#1A1A1A"/>
+            <circle cx="337" cy="156" r="5" fill="#1A1A1A"/>
+            <path d="M305 176 Q 323 190 341 176" stroke="#1A1A1A" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+            <!-- gorra -->
+            <path d="M275 144 Q 323 90 371 144 Q 348 130 323 130 Q 298 130 275 144 Z" fill="#0a4b7a"/>
+            <rect x="271" y="140" width="32" height="11" rx="5.5" fill="#0a4b7a"/>
+
+            <!-- gafete -->
+            <rect x="290" y="238" width="26" height="18" rx="4" fill="#EAF7FC"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+        </span>
+        <span>
+          <strong>Respuesta rápida</strong>
+          <span>Cotización por WhatsApp</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICIOS
+     ============================================================ -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <h2>Nuestros servicios</h2>
+      <p>Técnicos especializados en línea blanca y climas, con refacciones de calidad y diagnóstico honesto.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Servicio 1: Refrigeradores -->
+      <div class="service-card">
+        <span class="service-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="5" y1="10" x2="19" y2="10"/><line x1="8" y1="5" x2="8" y2="7"/><line x1="8" y1="13" x2="8" y2="15"/></svg>
+        </span>
+        <h3>Refrigeradores</h3>
+        <p>Reparación, mantenimiento preventivo y cambio de empaques para que tu refrigerador enfríe como nuevo.</p>
+        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20cotizar%20servicio%20de%20refrigerador">Cotizar</a>
+      </div>
+
+      <!-- Servicio 2: Congeladores y enfriadores -->
+      <div class="service-card">
+        <span class="service-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M4.5 6l15 12M19.5 6l-15 12"/></svg>
+        </span>
+        <h3>Congeladores y enfriadores</h3>
+        <p>Diagnóstico y reparación de congeladores y enfriadores comerciales y domésticos.</p>
+        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20cotizar%20servicio%20de%20congelador%20o%20enfriador">Cotizar</a>
+      </div>
+
+      <!-- Servicio 3: Lavadoras y secadoras -->
+      <div class="service-card">
+        <span class="service-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="1.6"/><line x1="8" y1="6.2" x2="8.01" y2="6.2"/></svg>
+        </span>
+        <h3>Lavadoras y secadoras</h3>
+        <p>Reparación y mantenimiento preventivo para alargar la vida útil de tus electrodomésticos.</p>
+        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20cotizar%20servicio%20de%20lavadora%20o%20secadora">Cotizar</a>
+      </div>
+
+      <!-- Servicio 4: Minisplits -->
+      <div class="service-card">
+        <span class="service-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="7" rx="2"/><line x1="6" y1="16" x2="6" y2="19"/><line x1="12" y1="16" x2="12" y2="20"/><line x1="18" y1="16" x2="18" y2="19"/></svg>
+        </span>
+        <h3>Minisplits</h3>
+        <p>Instalación, reparación, mantenimiento y carga de gas para que tu clima funcione todo el año.</p>
+        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20cotizar%20servicio%20de%20minisplit">Cotizar</a>
+      </div>
+
+      <!-- Servicio 5: Ajuste de puertas y empaques -->
+      <div class="service-card">
+        <span class="service-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="1.5"/><line x1="14" y1="12" x2="14.01" y2="12"/></svg>
+        </span>
+        <h3>Ajuste de puertas y empaques</h3>
+        <p>Cambio de empaques y ajuste de puertas para evitar fugas de frío y consumo excesivo de luz.</p>
+        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20cotizar%20ajuste%20de%20puertas%20o%20cambio%20de%20empaques">Cotizar</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VENTAJAS
+     ============================================================ -->
+<section class="advantages" id="ventajas">
+  <div class="container">
+    <div class="section-head">
+      <h2>¿Por qué elegirnos?</h2>
+      <p>Más de un electrodoméstico reparado, siempre con la misma promesa: frío y confianza.</p>
+    </div>
+
+    <div class="advantages-grid">
+      <div class="advantage">
+        <span class="advantage-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+        </span>
+        <h3>Servicio a domicilio</h3>
+        <p>Vamos hasta tu casa o negocio, sin que muevas tu electrodoméstico.</p>
+      </div>
+
+      <div class="advantage">
+        <span class="advantage-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+        </span>
+        <h3>Mismo día</h3>
+        <p>Diagnóstico y reparación rápida para que no te quedes sin frío.</p>
+      </div>
+
+      <div class="advantage">
+        <span class="advantage-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </span>
+        <h3>Trabajos garantizados</h3>
+        <p>Cada reparación cuenta con garantía por escrito en mano de obra.</p>
+      </div>
+
+      <div class="advantage">
+        <span class="advantage-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/></svg>
+        </span>
+        <h3>Cobertura amplia</h3>
+        <p>Atendemos todo el Área Metropolitana de Monterrey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COBERTURA
+     ============================================================ -->
+<section class="coverage" id="cobertura">
+  <div class="container">
+    <div class="section-head">
+      <h2>Zona de cobertura</h2>
+      <p>Damos servicio en todos estos municipios del Área Metropolitana de Monterrey.</p>
+    </div>
+
+    <div class="coverage-box">
+      <div class="coverage-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/></svg>
+        Área Metropolitana de Monterrey
+      </div>
+      <ul class="city-list">
+        <li>Monterrey</li>
+        <li>San Nicolás</li>
+        <li>Guadalupe</li>
+        <li>Apodaca</li>
+        <li>Escobedo</li>
+        <li>Santa Catarina</li>
+        <li>San Pedro</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO FINAL
+     ============================================================ -->
+<section class="contact-cta" id="contacto">
+  <div class="container">
+    <h2>¿Tu electrodoméstico necesita servicio?</h2>
+    <p>Escríbenos o llámanos ahora mismo, respondemos rápido.</p>
+    <div class="contact-phone-big">81-1939-6538</div>
+
+    <div class="contact-actions">
+      <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/528119396538?text=Hola%2C%20quiero%20solicitar%20un%20servicio%20con%20Refrigeraci%C3%B3n%20Nevada">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.5.02.2 5.32.2 11.87c0 2.1.55 4.14 1.6 5.95L.1 24l6.34-1.66a11.86 11.86 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.3 11.86-11.85 0-3.17-1.24-6.15-3.4-8.4zM12.06 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.76.99 1-3.66-.24-.37a9.78 9.78 0 0 1-1.5-5.2c0-5.41 4.4-9.81 9.83-9.81a9.75 9.75 0 0 1 6.95 2.88 9.75 9.75 0 0 1 2.88 6.94c0 5.42-4.41 9.81-9.79 9.81z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-ghost-on-blue" target="_blank" rel="noopener" href="https://www.facebook.com/share/1DDs7YiRNK/">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+        Facebook
+      </a>
+      <a class="btn btn-ghost-on-blue" href="tel:+528119396538">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.27a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4.5 6l15 12M19.5 6l-15 12M2 12h20" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <div>
+          <div class="footer-brand-name">Refrigeración Nevada</div>
+          <div class="footer-tagline">Frío y confianza, donde sea que estés</div>
+        </div>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/1DDs7YiRNK/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a href="https://wa.me/528119396538" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.5.02.2 5.32.2 11.87c0 2.1.55 4.14 1.6 5.95L.1 24l6.34-1.66a11.86 11.86 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.3 11.86-11.85 0-3.17-1.24-6.15-3.4-8.4zM12.06 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.76.99 1-3.66-.24-.37a9.78 9.78 0 0 1-1.5-5.2c0-5.41 4.4-9.81 9.83-9.81a9.75 9.75 0 0 1 6.95 2.88 9.75 9.75 0 0 1 2.88 6.94c0 5.42-4.41 9.81-9.79 9.81z"/></svg>
+        </a>
+        <a href="tel:+528119396538" aria-label="Teléfono">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.27a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Refrigeración Nevada. Todos los derechos reservados.</span>
+      <span>Área Metropolitana de Monterrey</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOTÓN FLOTANTE DE WHATSAPP
+     ============================================================ -->
+<a class="whatsapp-float" target="_blank" rel="noopener"
+   href="https://wa.me/528119396538?text=Hola%2C%20quiero%20solicitar%20un%20servicio%20con%20Refrigeraci%C3%B3n%20Nevada"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.5.02.2 5.32.2 11.87c0 2.1.55 4.14 1.6 5.95L.1 24l6.34-1.66a11.86 11.86 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.3 11.86-11.85 0-3.17-1.24-6.15-3.4-8.4zM12.06 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.76.99 1-3.66-.24-.37a9.78 9.78 0 0 1-1.5-5.2c0-5.41 4.4-9.81 9.83-9.81a9.75 9.75 0 0 1 6.95 2.88 9.75 9.75 0 0 1 2.88 6.94c0 5.42-4.41 9.81-9.79 9.81zm5.37-7.34c-.29-.15-1.74-.86-2-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.91-2.19-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.42 0 1.43 1.04 2.81 1.19 3 .15.2 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.62.7.22 1.33.19 1.83.11.56-.08 1.74-.71 1.98-1.4.24-.68.24-1.27.17-1.4-.07-.13-.27-.2-.56-.35z"/></svg>
+</a>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+  // Año dinámico en el footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Sombra en el header al hacer scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  // Menú móvil
+  const navToggle = document.getElementById('navToggle');
+  const headerNav = document.getElementById('headerNav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = headerNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Cerrar el menú móvil al elegir una sección
+  headerNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      headerNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
